@@ -22,16 +22,16 @@ Remarkable features:
 
 ```
 PuzzleCloneData/
-├── normal/           # Normal difficulty problems
+├── normal/                 # Normal difficulty problems
 │   ├── RL_train.jsonl      # Reinforcement Learning training data
 │   ├── RL_validate.jsonl   # Reinforcement Learning validation data
-│   ├── SFT.jsonl          # Supervised Fine-Tuning data
-│   └── Test.jsonl         # Test data
-├── hard/             # Hard difficulty problems
+│   ├── SFT.jsonl           # Supervised Fine-Tuning data
+│   └── Test.jsonl          # Test data
+├── hard/                   # Hard difficulty problems
 │   ├── RL_train.jsonl      # Reinforcement Learning training data
 │   ├── RL_validate.jsonl   # Reinforcement Learning validation data
-│   ├── SFT.jsonl          # Supervised Fine-Tuning data
-│   └── Test.jsonl         # Test data
+│   ├── SFT.jsonl           # Supervised Fine-Tuning data
+│   └── Test.jsonl          # Test data
 └── readme.md
 ```
 
@@ -133,33 +133,33 @@ Each JSONL entry contains the following fields:
 
 The following table summarizes the performance of several baseline models evaluated on the PuzzleCloneData test set. Metrics such as accuracy and F1 score are reported for each model. 
 
-| Model                          | Normal | Hard | Average |
-|--------------------------------|--------|------|---------|
-| **Proprietary Models**         |        |      |         |
-| ChatGPT-o3                     | xx     | xx   | xx      |
-| ChatGPT-4o                     | 31.5   | 23.8 | 27.7    |
-| Gemini-2.0-flash               | xx     | xx   | xx      |
-| Gemini-2.5-pro                 | xx     | xx   | xx      |
-| Claude-3.5-sonnet              | xx     | xx   | xx      |
-| Claude-4-sonnet                | xx     | xx   | xx      |
-| **GLM Series**                 |        |      |         |
-| GLM-Z1-9B-0414                 | 63.0   | 51.9 | 57.5    |
-| GLM-Z1-32B-0414                | 70.5   | 59.0 | 64.8    |
-| **Qwen2.5 Series**             |        |      |         |
-| Qwen2.5-7B-Instruct            | 16.8   | 11.9 | 14.4    |
-| Qwen2.5-14B-Instruct           | 24.3   | 17.4 | 20.9    |
-| Qwen2.5-32B-Instruct           | 31.1   | 22.9 | 27.0    |
-| Qwen2.5-72B-Instruct           | 32.6   | 24.6 | 28.6    |
-| **Qwen3 Series**               |        |      |         |
-| Qwen3-8B                       | 71.0   | 57.7 | 64.4    |
-| Qwen3-14B                      | 78.1   | 65.0 | 71.6    |
-| Qwen3-32B                      | 76.7   | 66.3 | 71.5    |
-| Qwen3-235B-A22B                | 82.0   | 71.2 | 76.6    |
-| **DeepSeek Series**            |        |      |         |
-| DeepSeek-R1-Distill-Qwen-14B   | 47.5   | 37.2 | 42.4    |
-| DeepSeek-R1-Distill-Qwen-32B   | 52.9   | 41.9 | 47.4    |
-| DeepSeek-R1-0528-Qwen3-8B      | 75.4   | 64.7 | 70.1    |
-| DeepSeek-R1-0528               | 87.7   | 80.2 | 84.0    |
+| Model                          | Normal | Hard | Avg. |
+|--------------------------------|--------|------|------|
+| **Proprietary Models**         |        |      |      |
+| ChatGPT-4o                     | 31.5   | 23.8 | 27.7 |
+| ChatGPT-o3                     | 86.8   | 82.0 | 84.4 |
+| Gemini-2.0-flash               | 41.7   | 30.5 | 36.1 |
+| Gemini-2.5-pro                 | 75.8   | 67.2 | 71.5 |
+| Claude-3.5-sonnet              | 37.4   | 26.5 | 32.0 |
+| Claude-4-sonnet                | 62.2   | 46.3 | 54.3 |
+| **GLM Series**                 |        |      |      |
+| GLM-Z1-9B-0414                 | 63.0   | 51.9 | 57.5 |
+| GLM-Z1-32B-0414                | 70.5   | 59.0 | 64.8 |
+| **Qwen2.5 Series**             |        |      |      |
+| Qwen2.5-7B-Instruct            | 16.8   | 11.9 | 14.4 |
+| Qwen2.5-14B-Instruct           | 24.3   | 17.4 | 20.9 |
+| Qwen2.5-32B-Instruct           | 31.1   | 22.9 | 27.0 |
+| Qwen2.5-72B-Instruct           | 32.6   | 24.6 | 28.6 |
+| **Qwen3 Series**               |        |      |      |
+| Qwen3-8B                       | 71.0   | 57.7 | 64.4 |
+| Qwen3-14B                      | 78.1   | 65.0 | 71.6 |
+| Qwen3-32B                      | 76.7   | 66.3 | 71.5 |
+| Qwen3-235B-A22B                | 82.0   | 71.2 | 76.6 |
+| **DeepSeek Series**            |        |      |      |
+| DeepSeek-R1-Distill-Qwen-14B   | 47.5   | 37.2 | 42.4 |
+| DeepSeek-R1-Distill-Qwen-32B   | 52.9   | 41.9 | 47.4 |
+| DeepSeek-R1-0528-Qwen3-8B      | 75.4   | 64.7 | 70.1 |
+| DeepSeek-R1-0528               | 87.7   | 80.2 | 84.0 |
 
 
 ## 📄 License
