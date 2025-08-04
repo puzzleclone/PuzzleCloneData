@@ -59,7 +59,7 @@ The difficulty distribution of the puzzles is visualized below.
 
 ### Question Type Distribution 
 
-| File (*)                  | 简答题 (Short Answer) | 单选题 (Single Choice)  | 填空题 (Fill-in-the-Blank)  |
+| File (*)                  | 简答题 (Short Answer) | 单选题 (Multiple-Choice)  | 填空题 (Fill-in-the-Blank)  |
 |---------------------------|----------------------|------------------------|----------------------------|
 | *normal/RL_validate.jsonl*| 390                  | 95                     | 10                         |
 | *normal/Test.jsonl*       | 5,108                | 1,262                  | 124                        |
@@ -121,7 +121,7 @@ Each JSONL entry contains the following fields:
     "vars_scale": "float"   // Variable scaling factor (0-1 scale)
   },
   "config": {...},          // Problem configuration
-  "qtype": "string",        // Question types ("简答题" | "选择题" | "填空题"). If multiple queries exist, their types will be separated by ','
+  "qtype": "string",        // Question types ("简答题" | "单选题" | "填空题"). If multiple queries exist, their types will be separated by ','
   "eval_type": "string",    // Evaluation types ("numeral" | "nominal" | "ordered_array" | "unordered_array" | "ooa" | "oua"). If multiple queries exist, their types will be separated by ','
   "source": "string",       // Source seed puzzle identifier (e.g., "A1-ant")
   "id": "string",           // Unique problem identifier
@@ -136,8 +136,8 @@ The following table summarizes the performance of several baseline models evalua
 | Model                          | Normal | Hard | Avg. |
 |--------------------------------|--------|------|------|
 | **Proprietary Models**         |        |      |      |
-| ChatGPT-4o                     | 31.5   | 23.8 | 27.7 |
-| ChatGPT-o3                     | 86.8   | 82.0 | 84.4 |
+| ChatGPT-4o                     | 31.6   | 23.9 | 27.7 |
+| ChatGPT-o3                     | 86.8   | **82.0** | **84.4** |
 | Gemini-2.0-flash               | 41.7   | 30.5 | 36.1 |
 | Gemini-2.5-pro                 | 75.8   | 67.2 | 71.5 |
 | Claude-3.5-sonnet              | 37.4   | 26.5 | 32.0 |
@@ -159,7 +159,7 @@ The following table summarizes the performance of several baseline models evalua
 | DeepSeek-R1-Distill-Qwen-14B   | 47.5   | 37.2 | 42.4 |
 | DeepSeek-R1-Distill-Qwen-32B   | 52.9   | 41.9 | 47.4 |
 | DeepSeek-R1-0528-Qwen3-8B      | 75.4   | 64.7 | 70.1 |
-| DeepSeek-R1-0528               | 87.7   | 80.2 | 84.0 |
+| DeepSeek-R1-0528               | **87.7**   | 80.2 | 84.0 |
 
 
 ## 📄 License
