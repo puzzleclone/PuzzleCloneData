@@ -1,4 +1,4 @@
-# PuzzleCloneData
+# PuzzleCloneData (PC-83K)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/puzzleclone/PuzzleClone?style=social)](https://github.com/puzzleclone/PuzzleClone/stargazers)
@@ -132,7 +132,7 @@ Each JSONL entry contains the following fields:
 ## 🧠 Baseline Model Performance
 
 The following table summarizes the performance of several baseline models evaluated on the PuzzleClone test set.
-Accuracy is reported for each model on the \textit{Normal} and \textit{Hard} subsets, along with their average.
+Accuracy is reported for each model on the *Normal* and *Hard* subsets, along with their average.
 
 | Model                          | Normal | Hard | Avg. |
 |--------------------------------|--------|------|------|
