@@ -14,7 +14,7 @@ The dataset spans:
 - Diverse mathematical problems of varying difficulties.
 
 Remarkable features:
-- ✅ **Guaranteed Verifiability:** Every problem is generated with a ground-truth solution and is verifiable by a symbolic SMT solver, ensuring correctness.
+- ✅ **Guaranteed Verifiability:** Every problem is generated with a ground-truth solution and is formally verifiable via symbolic SMT solving or deterministic program execution, ensuring correctness.
 - 🎯 **Granular Control:** Offers fine-grained control over problem attributes like scale, structure, and difficulty through a set of adjustable parameters, enabling large-scale batch generation.
 - ✨ **Flexible Adaptation:** Facilitates the easy customization of problem scenarios and translation into different languages or domains.
 
@@ -131,35 +131,39 @@ Each JSONL entry contains the following fields:
 
 ## 🧠 Baseline Model Performance
 
-The following table summarizes the performance of several baseline models evaluated on the PuzzleCloneData test set. Metrics such as accuracy and F1 score are reported for each model. 
+The following table summarizes the performance of several baseline models evaluated on the PuzzleClone test set.
+Accuracy is reported for each model on the \textit{Normal} and \textit{Hard} subsets, along with their average.
 
 | Model                          | Normal | Hard | Avg. |
 |--------------------------------|--------|------|------|
 | **Proprietary Models**         |        |      |      |
-| ChatGPT-4o                     | 31.6   | 23.9 | 27.7 |
-| ChatGPT-o3                     | 86.8   | **82.0** | **84.4** |
-| Gemini-2.0-flash               | 41.7   | 30.5 | 36.1 |
+| ChatGPT-4o                     | 31.6   | 24.6 | 28.2 |
+| ChatGPT-o3                     | 87.1   | 83.4 | 85.3 |
+| ChatGPT-5                      | **91.1**   | **86.3** | **88.7** |
+| Gemini-2.0-flash               | 42.0   | 31.6 | 36.8 |
 | Gemini-2.5-pro                 | 75.8   | 67.2 | 71.5 |
-| Claude-3.5-sonnet              | 37.4   | 26.5 | 32.0 |
-| Claude-4-sonnet                | 62.2   | 46.3 | 54.3 |
+| Gemini-3-pro                   | 86.5   | 83.0 | 84.8 |
+| Claude-3.5-sonnet              | 37.6   | 27.4 | 32.5 |
+| Claude-4-sonnet                | 62.7   | 46.8 | 55.3 |
+| Seed1.6                        | 87.8   | 82.4 | 85.1 |
 | **GLM Series**                 |        |      |      |
-| GLM-Z1-9B-0414                 | 63.0   | 51.9 | 57.5 |
-| GLM-Z1-32B-0414                | 70.5   | 59.0 | 64.8 |
+| GLM-Z1-9B-0414                 | 63.6   | 53.5 | 58.6 |
+| GLM-Z1-32B-0414                | 71.1   | 60.9 | 66.0 |
 | **Qwen2.5 Series**             |        |      |      |
-| Qwen2.5-7B-Instruct            | 16.8   | 11.9 | 14.4 |
-| Qwen2.5-14B-Instruct           | 24.3   | 17.4 | 20.9 |
-| Qwen2.5-32B-Instruct           | 31.1   | 22.9 | 27.0 |
-| Qwen2.5-72B-Instruct           | 32.6   | 24.6 | 28.6 |
+| Qwen2.5-7B-Instruct            | 16.8   | 12.1 | 14.5 |
+| Qwen2.5-14B-Instruct           | 24.3   | 17.9 | 21.1 |
+| Qwen2.5-32B-Instruct           | 31.4   | 23.5 | 27.4 |
+| Qwen2.5-72B-Instruct           | 32.8   | 25.3 | 29.0 |
 | **Qwen3 Series**               |        |      |      |
-| Qwen3-8B                       | 71.0   | 57.7 | 64.4 |
-| Qwen3-14B                      | 78.1   | 65.0 | 71.6 |
-| Qwen3-32B                      | 76.7   | 66.3 | 71.5 |
-| Qwen3-235B-A22B                | 82.0   | 71.2 | 76.6 |
+| Qwen3-8B                       | 71.6   | 59.4 | 65.5 |
+| Qwen3-14B                      | 78.6   | 67.0 | 72.8 |
+| Qwen3-32B                      | 77.0   | 68.1 | 72.5 |
+| Qwen3-235B-A22B                | 82.9   | 73.8 | 78.3 |
 | **DeepSeek Series**            |        |      |      |
-| DeepSeek-R1-Distill-Qwen-14B   | 47.5   | 37.2 | 42.4 |
-| DeepSeek-R1-Distill-Qwen-32B   | 52.9   | 41.9 | 47.4 |
-| DeepSeek-R1-0528-Qwen3-8B      | 75.4   | 64.7 | 70.1 |
-| DeepSeek-R1-0528               | **87.7**   | 80.2 | 84.0 |
+| DeepSeek-R1-Distill-Qwen-14B   | 47.9   | 38.4 | 43.1 |
+| DeepSeek-R1-Distill-Qwen-32B   | 53.3   | 43.2 | 48.3 |
+| DeepSeek-R1-0528-Qwen3-8B      | 76.0   | 66.8 | 71.4 |
+| DeepSeek-R1-0528               | 88.7   | 82.6 | 85.6 |
 
 
 ## 📄 License
